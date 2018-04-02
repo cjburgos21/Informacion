@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="#000000"
-        android:text="Ingieria en Computacion"
+        android:text="Ingenieria en Computacion"
         />
 
     <LinearLayout
@@ -42,8 +42,19 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
+
+    <ImageView
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="0dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/TWT"
+        />
+
+
     <TextView
-        android:paddingLeft="20dp"
+        android:paddingLeft="0dp"
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,11 +64,18 @@
         />
 
 
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/GH"
+            />
+
         <TextView
             android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="85dp"
+            android:paddingRight="0dp"
             android:textColor="#000000"
             android:text="GitHub:cjburgos21"
             />
@@ -72,25 +90,41 @@
         android:orientation="horizontal"
         >
 
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/correo"
+        android:layout_marginLeft="20dp"
+        />
 
 
     <TextView
-        android:paddingLeft="20dp"
+        android:paddingLeft="0dp"
         android:layout_marginTop="30dp"
         android:textColor="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Correo:00076015@uca.edu"
+        android:paddingRight="10dp"
+        />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/phone"
         />
 
     <TextView
-        android:paddingLeft="15dp"
+        android:paddingLeft="0dp"
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefono:7014-3865"
         android:textColor="#000000"
-        android:paddingRight="75dp"
+        android:paddingRight="0dp"
         />
 
     </LinearLayout>
@@ -101,7 +135,7 @@
 
         <TextView
             android:textColor="#000000"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="250dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Powered By:Javier Burgos"
