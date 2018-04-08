@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             comparte.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             comparte.setType("*/*");
             comparte.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-            comparte.putExtra(Intent.EXTRA_TEXT, "Nombre:" + nombres + "\n Carrera:" + carrera1 + "\n" + twitter1 + "\n" + github1 + "\n" + correoe + "\n" + tel + "\n" +creador);
+            comparte.putExtra(Intent.EXTRA_TEXT, "Nombre:" + nombres + "\n Carrera:" + carrera1 + "\n" + twitter1 + "\n" + github1 + "\n" + correoe + "\n" + tel + "\n" +powered);
             /*Permite escoger la app para recibir la informacion*/
             startActivity(Intent.createChooser(comparte,"Que programa desea utilizar?"));
 
