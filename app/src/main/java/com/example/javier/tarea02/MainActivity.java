@@ -22,10 +22,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView imagen1;
     /*Declarando Variables*/
-    String nombres, carrera1, twitter1, github1, correoe, tel;
+    String nombres, carrera1, twitter1, github1, correoe, tel,powered;
     TextView nombre1, carrera, twitter, github, correo1, telefono, creador;
+    ImageView imagen1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imagen1 = (ImageView) findViewById(R.id.prueba);
 
+
+        /*Haciendo imagen de perfil circular*/
         ImageView prueba = (ImageView) findViewById(R.id.prueba);
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.perfilv);
         RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
@@ -45,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void compartir(View view) {
         Bitmap bitmap1 = vista(imagen1);
-
         nombre1 = (TextView) findViewById(R.id.envia1);
         nombres = nombre1.getText().toString();
         carrera = (TextView) findViewById(R.id.envia2);
@@ -59,7 +61,10 @@ public class MainActivity extends AppCompatActivity {
         telefono = (TextView) findViewById(R.id.envia6);
         tel = telefono.getText().toString();
         creador = (TextView) findViewById(R.id.envia7);
+        powered = creador.getText().toString();
 
+
+        /*Declarando Intent*/
         try {
             File file = new File(this.getExternalCacheDir(), "apoyo.png");
             FileOutputStream fuera = new FileOutputStream(file);
@@ -71,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             comparte.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             comparte.setType("*/*");
             comparte.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
-            comparte.putExtra(Intent.EXTRA_TEXT, "Nombre:" + nombres + "\n Carrera:" + carrera1 + "\n" + twitter1 + "\n" + github1 + "\n" + correoe + "\n" + tel);
+            comparte.putExtra(Intent.EXTRA_TEXT, "Nombre:" + nombres + "\n Carrera:" + carrera1 + "\n" + twitter1 + "\n" + github1 + "\n" + correoe + "\n" + tel + "\n" +creador);
             startActivity(Intent.createChooser(comparte,"Que programa desea utilizar?"));
 
         } catch (Exception e) {
@@ -81,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*Generador de imagen*/
     private Bitmap vista(View view){
         Bitmap retorna = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas1 = new Canvas(retorna);
